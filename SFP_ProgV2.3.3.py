@@ -1,4 +1,4 @@
-#Rostelecom SFP Writer
+#SFP Writer
 #ПО для работы с программатором SFP/SFP+ ProgrammatorSFP_2.5 by ZemtsovVA vladimir-a-zemtsov@ya.ru
 #Для подробностей читай ReadMe.txt файл
 
@@ -16,8 +16,6 @@ import math
 import re
 import os
 from threading import Thread
-# import colorama
-# from colorama import Fore, Back, Style
 from image import *
 import struct
 import datetime
@@ -29,7 +27,7 @@ import json
 
 release_version = '2.3.3'
 email = 'vladimir-a-zemtsov@ya.ru'
-programm_name = f'Rostelecom SFP Writer v.{release_version}'
+programm_name = f'vzem SFP Writer v.{release_version}'
 
 file_handler = open('theme.cfg', 'r')
 active_theme = int(file_handler.read().strip())
@@ -46,11 +44,6 @@ cisco_security_key = cisco_data['security_key']
 cisco_pids = cisco_data['pids']
 cisco_vids = cisco_data['vids']
             
-# colorama.init()
-# INFO = Back.CYAN + Fore.WHITE
-# FAIL = Back.RED + Fore.WHITE + Style.BRIGHT
-# OK = Back.GREEN + Fore.WHITE
-# RST = Style.RESET_ALL
 INFO,FAIL,OK,RST = '','','',''
 themes = ['Black', 'BlueMono', 'BluePurple', 'BrightColors', 'BrownBlue', 'Dark', 'Dark2', 'DarkAmber', 'DarkBlack', 
 'DarkBlack1', 'DarkBlue', 'DarkBlue1', 'DarkBlue10', 'DarkBlue11', 'DarkBlue12', 'DarkBlue13', 'DarkBlue14', 'DarkBlue15', 
